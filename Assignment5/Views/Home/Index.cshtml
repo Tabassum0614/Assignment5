@@ -1,0 +1,10 @@
+﻿@model IEnumerable<CityWeather>
+
+<div class="margin-top-200 margin-left">
+    <div class="flex">
+        @foreach (var data in Model)
+        {
+            <partial name="_CityDataPartial" model=data />
+        }
+    </div>
+</div>
