@@ -1,0 +1,25 @@
+﻿@model CityWeather
+@{
+    string getClassName(int templ)
+    {
+        return templ < 44 ? " blue-back" :
+            (templ > 44 && templ < 74) ? " green-back" : " orange-back"; ;
+    }
+}
+<div class="box cursor-pointer w-30 @getClassName(Model.TemperatureFahrenheit)">
+    <div class="flex-borderless">
+        <div class="w-50">
+            <h2>@Model.CityName-VC</h2>
+            <h4 class="text-dark-grey">@Model.DateAndTime.ToString("hh:mm tt")</h4>
+
+
+            <div>
+                <a href="/Weather-details-VC/@Model.CityUniqueCode" class="margin-top">Details</a>
+            </div>
+        </div>
+        <div class="w-50 border-left">
+            <h1>@Model.TemperatureFahrenheit <sup class="text-grey">&#8457</sup></h1>
+        </div>
+    </div>
+
+</div>

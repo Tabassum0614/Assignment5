@@ -7,10 +7,15 @@
 </head>
 <body>
     <div class="container">
+        <div class="navbar">
+            <div class="navbar-brand">View Components Demo App</div>
+            <ul>
+                <li><a href="~/">Weather with Partial View </a></li>
+                <li><a href="~/Home">Weather With View Component</a></li>
+            </ul>
+        </div>
+
         <div class="page-content">
-            <div class="margin-bottom">
-                <h1>Weather</h1>
-            </div>
             @RenderBody()
         </div>
     </div>

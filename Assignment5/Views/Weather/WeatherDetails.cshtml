@@ -1,0 +1,4 @@
+﻿@model CityWeather
+<h2>Details Page using View Component</h2>
+@await Component.InvokeAsync("WeatherBox", new { modeldata = Model });
+@* <WeatherBox modeldata="@Model"></WeatherBox> *@

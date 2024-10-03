@@ -1,0 +1,10 @@
+﻿@model IEnumerable<CityWeather>
+<h2>View Component Assigment</h2>
+<div class="margin-top-200 margin-left">
+    <div class="flex">
+        @foreach (var data in Model)
+        {
+            @await Component.InvokeAsync("WeatherBox", new { modeldata = data });
+        }
+    </div>
+</div>
